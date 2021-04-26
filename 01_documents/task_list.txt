@@ -1,0 +1,35 @@
+Interview Study Task List:
+    - Study documentation of the below packages:
+        - prophet
+        - UCM
+        - arimax
+        - glm
+        - rfc/rfr
+            - https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+            - Gini impurity: https://victorzhou.com/blog/gini-impurity/
+        - gbc/gbr
+            - https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html
+        - naive bayes
+            - https://scikit-learn.org/stable/modules/naive_bayes.html
+        - svm
+        - itertools
+        - elasticnet regression
+            - https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html
+            - https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNetCV.html
+            - https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.MultiTaskElasticNetCV.html#sklearn.linear_model.MultiTaskElasticNetCV
+            - https://cran.r-project.org/web/packages/glmnet/glmnet.pdf
+            - packages used: glmnet with alpha and beta hyperparameters
+            - Difference between Ridge and Lasso Regression:
+            - Optional: Coordinate Descent Solver. Convergence Algorithm used by ElasticNetCV
+    - Packages to be learnt with the below modeling steps (and relevant statistics) in mind:
+        - Supervised Classification Steps:
+        - Unsupervised Classification Steps:
+        - Time Series Analysis
+        - Forecasting
+        - Topic modeling
+        - Panel Data Analysis
+    - Theory:
+        - glmnet family of regression
+    - Add missing projects details on Linkedin
+    - Add company job role at TheMathCompany
+    - Add Data Science packages in resume (sklearn, etc,.)
