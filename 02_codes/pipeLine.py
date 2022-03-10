@@ -7,7 +7,6 @@
 # them in order. Need an abstract base class that can furher be inherited from
 
 from abc import ABC, abstractmethod
-from re import S
 
 class PipeLine(ABC):
     @abstractmethod
@@ -32,7 +31,7 @@ class PipeLine(ABC):
     def execSteps(self):
         pass
 
-class RandomForestClassification(PipeLine):
+class RandomForestClassificationPipeLine(PipeLine):
     def __init__(self, steps):
         self.steps = steps
 
@@ -58,7 +57,7 @@ def main():
     # Create a RandomForestClassification object which follows the properties
     # defined by Abstract SuperClass PipeLine
     steps = "dataImport,dataExport,dataTransform"
-    obj = RandomForestClassification(steps)
+    obj = RandomForestClassificationPipeLine(steps)
     obj.execSteps()
 
 if __name__ == '__main__':
