@@ -29,7 +29,7 @@ class PipeLine(ABC):
 
     @abstractmethod
     def execSteps(self):
-        pass
+        raise NotImplementedError("execSteps() not defined in subclass")
 
 class RandomForestClassificationPipeLine(PipeLine):
     def __init__(self, steps):
@@ -51,7 +51,6 @@ class RandomForestClassificationPipeLine(PipeLine):
         self.steps = self.steps.split(',')
         for step in self.steps:
             exec('self.'+ step + '()')
-
 
 def main():
     # Create a RandomForestClassification object which follows the properties
