@@ -7,8 +7,13 @@
 # them in order. Need an abstract base class that can furher be inherited from
 
 from abc import ABC, abstractmethod
+from re import S
 
 class PipeLine(ABC):
+    @abstractmethod
+    def __init__(self, steps):
+        self.steps = steps
+
     @abstractmethod
     def dataImport(self):
         raise NotImplementedError("dataImport() not defined in subclass")
@@ -23,7 +28,14 @@ class PipeLine(ABC):
     def featureEngineering(self):
         pass
 
+    @abstractmethod
+    def execSteps(self):
+        pass
+
 class RandomForestClassification(PipeLine):
+    def __init__(self, steps):
+        self.steps = steps
+
     def dataImport(self):
         print("Sub Class Method Data Import Called")
 
@@ -36,16 +48,18 @@ class RandomForestClassification(PipeLine):
     # def featureEngineering(self):
     #     return super().featureEngineering()
 
+    def execSteps(self):
+        self.steps = self.steps.split(',')
+        for step in self.steps:
+            exec('self.'+ step + '()')
 
 
 def main():
     # Create a RandomForestClassification object which follows the properties
     # defined by Abstract SuperClass PipeLine
-    obj = RandomForestClassification()
-    obj.dataImport()
-    obj.dataExport()
-    obj.dataTransform()
-    obj.featureEngineering()
+    steps = "dataImport,dataExport,dataTransform"
+    obj = RandomForestClassification(steps)
+    obj.execSteps()
 
 if __name__ == '__main__':
     main()
