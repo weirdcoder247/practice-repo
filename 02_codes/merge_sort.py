@@ -1,5 +1,6 @@
 class Solution():
     def mergeSort(self, array: list) -> None:
+        # Break recursion when array length is 1
         if len(array) > 1:
             middle_index = len(array)//2
             left_array = array[:middle_index]
