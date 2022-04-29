@@ -1,5 +1,5 @@
 class Solution():
-    def bubbleSort(self, array: list) -> list:
+    def bubbleSort(self, array: list) -> None:
         n = len(array)
         for i in range(n):
             # works without this flag but will be unoptimized
